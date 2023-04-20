@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); /* import police Poppins depuis fonts.google.com */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* import police Poppins depuis fonts.google.com */
 
 /* Réinitialise les marges, paddings + police de la page */
 * {
@@ -6,7 +7,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins';
-  }
+}
 
 .background-color {
     background: radial-gradient(rgb(139, 195, 245), #1294b8);
@@ -34,6 +35,7 @@
     display: flex;
     gap: 20px;
 }
+
 .social-icons a {
     width: 24px;
     height: 24px;
@@ -43,11 +45,13 @@
 
 /* NAVBAR */
 .header-container a:hover {
-    color:rgb(191, 220, 245);
+    color: rgb(191, 220, 245);
 }
+
 .social-icons a:hover {
     filter: invert(80%);
 }
+
 nav {
     display: flex;
 }
@@ -83,7 +87,8 @@ nav ul li a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;;
+    align-items: center;
+    ;
     gap: 80px;
 }
 
@@ -93,12 +98,13 @@ nav ul li a {
 }
 
 .newsletter h1 {
-    color:rgb(46, 45, 45);
+    color: rgb(46, 45, 45);
     font-size: 55px;
     font-weight: 700;
     line-height: 70px;
     margin-bottom: 40px;
 }
+
 .newsletter p {
     font-size: 18px;
     font-weight: 400;
@@ -106,9 +112,11 @@ nav ul li a {
     margin-bottom: 40px;
     width: 430px;
 }
+
 .newsletter button {
     cursor: pointer;
 }
+
 .illustration {
     width: 600px;
 }
@@ -121,12 +129,14 @@ nav ul li a {
     border-radius: 25px;
     width: 450px;
 }
+
 .subscribe input {
     border: none;
     font-weight: 700;
     opacity: 0.5;
     width: 300px;
 }
+
 .subscribe input:focus {
     outline: none;
 
@@ -139,15 +149,19 @@ nav ul li a {
     border: none;
     border-radius: 25px;
     color: white;
-    background-color: #1294b8;;
+    background-color: #1294b8;
+    ;
     transition: 0.6s;
 }
+
 .subscribe button:hover {
-    background-color: #46b1ce;;
+    background-color: #46b1ce;
+    ;
 }
+
 /* Product features */
 
-.product-feature {
+.section-card {
     min-height: 100vh;
     background-color: white;
     text-align: center;
@@ -155,8 +169,7 @@ nav ul li a {
     justify-content: center;
 }
 
-.card-container
-{
+.card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -176,21 +189,26 @@ nav ul li a {
     border-radius: 10px;
     transition: 0.4s;
 }
+
 .cardimg {
     padding-bottom: 20px;
     font-size: 40px;
     color: white;
 }
+
 .card-text {
-    color:white;
+    color: white;
 }
+
 .card-text h1 {
     padding-bottom: 10px;
     font-weight: 600;
 }
+
 .card-text p {
     font-weight: 300;
 }
+
 .card:hover {
     transform: translateY(-20px);
 }
@@ -198,10 +216,12 @@ nav ul li a {
 .text {
     margin-top: 100px;
 }
+
 .text h1 {
     font-weight: 600;
     margin-bottom: 20px;
 }
+
 .text p {
     font-weight: 400;
     color: grey
@@ -232,10 +252,12 @@ nav ul li a {
 .equipe h1 {
     font-weight: 500;
 }
+
 .equipe h2 {
     font-weight: 400;
     font-size: 17px;
 }
+
 .equipe p {
     color: grey;
     font-size: 14px;
@@ -261,6 +283,7 @@ nav ul li a {
     overflow: hidden;
     height: 160px;
 }
+
 .card-person img {
     width: 160px;
     filter: grayscale(100%);
@@ -273,17 +296,20 @@ nav ul li a {
     transition: all 0.5s;
 
 }
-.card-person .person-img:hover .social{
-    transform: translateX(65px) translateY(35px); 
+
+.card-person .person-img:hover .social {
+    transform: translateX(65px) translateY(35px);
 }
-.card-person .person-img:hover a{
+
+.card-person .person-img:hover a {
     color: black;
 }
 
 .card-person .person-img {
-    position:relative;
+    position: relative;
 }
-.card-person a { 
+
+.card-person a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -301,7 +327,7 @@ nav ul li a {
     position: absolute;
     display: flex;
     flex-direction: column;
-    top:0;
+    top: 0;
     left: -50px;
     gap: 5px;
     transition: all 0.5s;
@@ -312,10 +338,14 @@ nav ul li a {
 
 .parallax {
     background-image: url("parallax.png");
-    background-attachment: fixed; /* Fixe l'image pendant le scroll */
-    background-size: cover; /* L'image prendra 100% de l'espace, quitte à la crop */
-    background-position: center; /* Centre la position de l'image */
-    background-repeat: no-repeat; /* Empêche l'image de se répéter en fonction de la taille d'écran */
+    background-attachment: fixed;
+    /* Fixe l'image pendant le scroll */
+    background-size: cover;
+    /* L'image prendra 100% de l'espace, quitte à la crop */
+    background-position: center;
+    /* Centre la position de l'image */
+    background-repeat: no-repeat;
+    /* Empêche l'image de se répéter en fonction de la taille d'écran */
     height: 1200px;
 }
 
@@ -330,7 +360,7 @@ nav ul li a {
     gap: 30px
 }
 
-.text2 h1{
+.text2 h1 {
     color: white;
     font-weight: 500;
     margin-bottom: 20px;
@@ -348,12 +378,28 @@ nav ul li a {
     border: solid 1px white;
     border-radius: 5px;
     color: white;
-    background-color: hsla(193, 82%, 40%, 0);;
+    background-color: hsla(193, 82%, 40%, 0);
+    ;
     transition: 0.6s;
     cursor: pointer;
 }
+
 .started:hover {
     background-color: #ffffffde;
     transform: translateY(-5px);
     color: #000000d0;
+}
+
+/* Blog dans parallax*/
+
+
+
+.blog-text h1 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.blog-text p {
+    font-weight: 400;
+    color: grey
 }
