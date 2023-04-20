@@ -161,6 +161,7 @@ nav ul li a {
     width: 400px;
     height: 400px;
     border-radius: 10px;
+    transition: 0.4s;
 }
 .cardimg {
     padding-bottom: 20px;
@@ -176,6 +177,9 @@ nav ul li a {
 }
 .card-text p {
     font-weight: 300;
+}
+.card:hover {
+    transform: translateY(-20px);
 }
 
 .text {
