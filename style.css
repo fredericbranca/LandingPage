@@ -229,7 +229,7 @@ nav ul li a {
 
 .text-container {
     padding-top: 70px;
-    height: 50vh;
+    padding-bottom: 300px;
     background-color: #f3f3f3;
 }
 
@@ -342,7 +342,7 @@ nav ul li a {
     background-position: center;                /* Centre la position de l'image */   
     background-repeat: no-repeat;               /* Empêche l'image de se répéter en fonction de la taille d'écran */
     
-    height: 1200px;
+    min-height: 1200px;
 }
 
 .parallax-container {
@@ -477,4 +477,71 @@ nav ul li a {
     font-weight: 500;
     text-decoration: none;
     color: hsl(240, 62%, 54%);
+}
+
+/* PRICING */
+
+.pricing {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.header-pricing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.h-pricing-card{
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 300px;
+    min-height: 300px;
+}
+.header-pricing img {
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.h-pricing-card h2 {
+    margin-bottom: 30px;
+}
+
+.h-pricing-stat {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.h-pricing-stat h3 {
+    font-weight: 500;
+}
+
+.h-pricing-card p {
+    font-weight: 400;
+    font-size: 15px;
+    color: grey
+}
+
+.header-pricing button {
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #3f6cce;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.header-pricing button:hover {
+    background-color: hsl(221, 54%, 61%);
 }
