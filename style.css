@@ -388,8 +388,30 @@ nav ul li a {
 
 /* Blog dans parallax*/
 
+.section-blog {
+    min-height: 100vh;
+    background-color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardblog-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 80px;
+}
+
+.cardblog-container img {
+    width: 350px;
+}
 
 .blog-text h1 {
+    padding-top: 80px;
     font-weight: 600;
     margin-bottom: 20px;
 }
@@ -397,4 +419,12 @@ nav ul li a {
 .blog-text p {
     font-weight: 400;
     color: grey
+}
+
+.cardblog-text h1 {
+    font-weight: 500;
+}
+.cardblog-text p {
+    font-weight: 300;
+    color: grey;
 }
