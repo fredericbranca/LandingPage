@@ -290,11 +290,10 @@ nav ul li a {
     transition: all 0.5s;
 }
 
-.card-person img:hover {
+.person-img:hover img {
     filter: none;
     transform: scale(1.1);
     transition: all 0.5s;
-
 }
 
 .card-person .person-img:hover .social {
@@ -338,14 +337,11 @@ nav ul li a {
 
 .parallax {
     background-image: url("parallax.png");
-    background-attachment: fixed;
-    /* Fixe l'image pendant le scroll */
-    background-size: cover;
-    /* L'image prendra 100% de l'espace, quitte à la crop */
-    background-position: center;
-    /* Centre la position de l'image */
-    background-repeat: no-repeat;
-    /* Empêche l'image de se répéter en fonction de la taille d'écran */
+    background-attachment: fixed;               /* Fixe l'image pendant le scroll */
+    background-size: cover;                     /* L'image prendra 100% de l'espace, quitte à la crop */ 
+    background-position: center;                /* Centre la position de l'image */   
+    background-repeat: no-repeat;               /* Empêche l'image de se répéter en fonction de la taille d'écran */
+    
     height: 1200px;
 }
 
@@ -391,7 +387,6 @@ nav ul li a {
 }
 
 /* Blog dans parallax*/
-
 
 
 .blog-text h1 {
