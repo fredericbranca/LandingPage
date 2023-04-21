@@ -83,18 +83,22 @@ nav ul li a {
 /* Première Section */
 
 .premiereSection {
-    height: 91vh;
+    min-height: 91vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    ;
     gap: 80px;
 }
 
 .newsletter {
+    display: flex;
+    flex-direction: column;
     padding-top: 30px;
-    width: 450px;
+    max-width: 450px;
+}
+.illustration {
+    width: 600px;
 }
 
 .newsletter h1 {
@@ -110,15 +114,10 @@ nav ul li a {
     font-weight: 400;
     line-height: 27px;
     margin-bottom: 40px;
-    width: 430px;
 }
 
 .newsletter button {
     cursor: pointer;
-}
-
-.illustration {
-    width: 600px;
 }
 
 .subscribe {
@@ -127,7 +126,6 @@ nav ul li a {
     padding: 5px;
     padding-left: 9px;
     border-radius: 25px;
-    width: 450px;
 }
 
 .subscribe input {
@@ -139,7 +137,6 @@ nav ul li a {
 
 .subscribe input:focus {
     outline: none;
-
 }
 
 .subscribe button {
@@ -158,6 +155,7 @@ nav ul li a {
     background-color: #46b1ce;
     ;
 }
+
 
 /* Product features */
 
@@ -228,7 +226,6 @@ nav ul li a {
 }
 
 .text-container {
-    padding-top: 70px;
     padding-bottom: 300px;
     background-color: #f3f3f3;
 }
@@ -391,9 +388,6 @@ nav ul li a {
 .section-blog {
     min-height: 100vh;
     background-color: white;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
 }
 
 .cardblog-container {
@@ -404,6 +398,7 @@ nav ul li a {
     justify-content: center;
     gap: 35px;
     margin-top: 80px;
+    margin-bottom: 70px;
 }
 
 .card-blog {
@@ -451,6 +446,13 @@ nav ul li a {
     filter: brightness(0.6);
 }
 
+.blog-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 .blog-text h1 {
     padding-top: 80px;
@@ -460,7 +462,8 @@ nav ul li a {
 
 .blog-text p {
     font-weight: 400;
-    color: grey
+    color: grey;
+    max-width: 600px;
 }
 
 .cardblog-text h1 {
