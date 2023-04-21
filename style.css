@@ -447,8 +447,8 @@ nav ul li a {
     font-weight: 400;
     font-size: 13px;
 }
-.card-header img:hover {
-    filter: brightness(0.7);
+.card-header:hover img  {
+    filter: brightness(0.6);
 }
 
 
@@ -484,9 +484,9 @@ nav ul li a {
 .pricing {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
     min-height: 100vh;
+    margin-top: 110px;
 }
 
 .header-pricing {
@@ -496,7 +496,7 @@ nav ul li a {
 }
 
 .h-pricing-card{
-    max-width: 400px;
+    max-width: 500px;
     max-height: 400px;
     min-width: 300px;
     min-height: 300px;
@@ -509,7 +509,7 @@ nav ul li a {
 }
 
 .h-pricing-card h2 {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .h-pricing-stat {
