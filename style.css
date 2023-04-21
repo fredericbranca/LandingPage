@@ -406,9 +406,51 @@ nav ul li a {
     margin-top: 80px;
 }
 
+.card-blog {
+    display: flex;
+    flex-direction: column;
+}
+
 .cardblog-container img {
     width: 350px;
+    border-radius: 7px;
 }
+
+.card-header {
+    position: relative;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 1;
+}
+
+.info-card  {
+    opacity: 0;
+    transition: 0.4s;
+}
+.info-card i{
+    color: white;
+    padding: 7px;
+}
+.card-header:hover .info-card {
+    opacity: 1;
+}
+.info-card p1 {
+    font-weight: 700;
+}
+.info-card p2 {
+    font-weight: 400;
+    font-size: 13px;
+}
+.card-header img:hover {
+    filter: brightness(0.7);
+}
+
 
 .blog-text h1 {
     padding-top: 80px;
@@ -423,8 +465,16 @@ nav ul li a {
 
 .cardblog-text h1 {
     font-weight: 500;
+    font-size: 20px;
 }
 .cardblog-text p {
     font-weight: 300;
     color: grey;
+    font-size: 15px;
+    margin-bottom: 17px;
+}
+.cardblog-text a {
+    font-weight: 500;
+    text-decoration: none;
+    color: hsl(240, 62%, 54%);
 }
