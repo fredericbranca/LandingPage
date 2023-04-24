@@ -101,6 +101,10 @@ nav ul li a {
 
 .premiereSection {
     min-height: 91vh;
+}
+
+.accueil {
+    padding-top: 140px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -709,7 +713,7 @@ nav ul li a {
     cursor: pointer;
     transition: 0.4s;
 }
-.header-pricing button:hover {
+.card-p button:hover {
     background-color: hsl(221, 54%, 61%);
 }
 
@@ -718,5 +722,57 @@ nav ul li a {
     .promo {
         position:relative;
         transform: translateY(0px);
+    }
+}
+
+/* FOOTER */
+
+
+footer {
+    height: 200px;
+    background: hwb(0 12% 88%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+footer .social-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    gap: 60px;
+}
+footer .social-footer a {
+    text-decoration: none;
+    color: #a3a0a0;
+}
+
+footer .social-footer i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid;
+    border-color: #a3a0a0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+footer .links a, span, .credits{
+    color: #a3a0a0;
+    text-decoration: none;
+    padding: 0 17px;
+    font-size: 15px;
+}
+
+@media (max-width: 535px) {
+    footer .links a, .credits {
+        font-size: 10px;
+        padding: 0 10px;
     }
 }
