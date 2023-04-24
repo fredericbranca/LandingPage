@@ -498,9 +498,7 @@ nav ul li a {
 
 .h-pricing-card{
     max-width: 500px;
-    max-height: 400px;
-    min-width: 150px;
-    min-height: 150px;
+
 }
 .header-pricing img {
     max-width: 500px;
@@ -551,7 +549,6 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 80px;
 }
 .text-pricing h2 {
     padding-top: 80px;
@@ -568,14 +565,19 @@ nav ul li a {
 }
 
 .cards-pricing {
-    position: relative;
+    margin-top: 80px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px
 }
 
-.card-p .sale {
+.promo {
+    position:relative;
+    transform: translateY(-30px);
+}
+
+.promo .sale {
     position: absolute;
     display: flex;
     align-items: center;
@@ -589,6 +591,7 @@ nav ul li a {
     border-radius: 0% 25%;
     line-height: 15px;
 }
+
 .card-p .sale p {
     width: 60px;
 }
@@ -598,7 +601,7 @@ nav ul li a {
     background: white;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 5px 8px rgba(0,0,0,.075);
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.144);
     padding-top: 30px;
 }
 
@@ -652,6 +655,13 @@ nav ul li a {
 }
 
 /* Media Queries */
+@media (max-width: 1256px) {
+    .promo {
+        position:relative;
+        transform: translateY(0px);
+    }
+}
+
 @media (max-width: 1065px) {
     .header-pricing img {
         max-width: 400px;
@@ -659,9 +669,6 @@ nav ul li a {
     }
     .h-pricing-card{
         max-width: 400px;
-        max-height: 300px;
-        min-width: 150px;
-        min-height: 150px;
     }
 }
 
@@ -674,8 +681,5 @@ nav ul li a {
     .h-pricing-card{
         padding-left: 20px;
         max-width: 350px;
-        max-height: 350px;
-        min-width: 150px;
-        min-height: 150px;
     }
 }
