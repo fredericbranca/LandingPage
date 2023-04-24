@@ -485,9 +485,6 @@ nav ul li a {
 /* PRICING */
 
 .pricing {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     min-height: 100vh;
     margin-top: 110px;
 }
@@ -495,6 +492,7 @@ nav ul li a {
 .header-pricing {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 50px;
 }
 
@@ -543,6 +541,93 @@ nav ul li a {
     transition: 0.4s;
 }
 
+.header-pricing button:hover {
+    background-color: hsl(221, 54%, 61%);
+}
+
+.text-pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.text-pricing h2 {
+    padding-top: 80px;
+}
+.text-pricing p {
+    max-width: 600px;
+}
+
+/* CARD */
+
+.container {
+    min-height: 100vh;
+    background-color: #f3f3f3;
+}
+
+.cards-pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px
+}
+
+.card-p {
+    width: 400px;
+    background: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 8px rgba(0,0,0,.075);
+    padding-top: 30px;
+}
+
+.card-p-header h2 {
+    font-size: 20px;
+}
+.card-p-header p {
+    color: #3f6cce;
+    font-size: 60px;
+}
+.card-p-header sup {
+    font-size: 30px;
+}
+.card-p-header span {
+    color: grey;
+    font-size: 14px;
+}
+
+.card-center ul {
+    line-height: 40px;
+    margin: 20px
+}
+.card-center ul li {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+}
+
+.card-center .fa-circle-check {
+    color:green;
+}
+.card-center .fa-circle-xmark {
+    color:red;
+}
+
+.card-p button {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    padding: 10px 60px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #3f6cce;
+    cursor: pointer;
+    transition: 0.4s;
+}
 .header-pricing button:hover {
     background-color: hsl(221, 54%, 61%);
 }
