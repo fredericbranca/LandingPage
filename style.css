@@ -568,10 +568,29 @@ nav ul li a {
 }
 
 .cards-pricing {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px
+}
+
+.card-p .sale {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    background: #3f6cce;
+    color: white;
+    border-radius: 0% 25%;
+    line-height: 15px;
+}
+.card-p .sale p {
+    width: 60px;
 }
 
 .card-p {
