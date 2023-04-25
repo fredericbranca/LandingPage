@@ -56,15 +56,15 @@ require('db-functions.php'); ?>
                         </div>
                         <div>
                             <label for="name">Support</label>
-                            <input type="text" id="support" name="support" required>
+                            <input type="text" id="support" name="support" value="<?= $pricing['support'] ?>" required>
                         </div>
                         <div>
                             <label for="name">Domain</label>
-                            <input type="text" id="domain" name="domain" required>
+                            <input type="text" id="domain" name="domain" value="<?= $pricing['domain'] ?>" required>
                         </div>
                         <div>
                             <label for="name">Hidden Fees</label>
-                            <input type="text" id="hiddenfees" name="hiddenfees" required>
+                            <input type="text" id="hiddenfees" name="hiddenfees" value="<?= $pricing['hidden_fees'] ?>" required>
                         </div>
                     </div>
                     <button>Update</button>
