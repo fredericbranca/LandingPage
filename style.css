@@ -700,6 +700,7 @@ nav ul li a {
     font-size: 30px;
 }
 .card-p-header span {
+    padding: 0;
     color: grey;
     font-size: 14px;
 }
@@ -757,6 +758,7 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 25px;
+    margin-top: 20px;
 }
 
 footer .social-footer {
