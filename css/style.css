@@ -395,7 +395,7 @@ nav ul li a {
 /* SECTION PARRALAX */
 
 .parallax {
-    background-image: url("parallax.png");
+    background-image: url("../img/parallax.png");
     background-attachment: fixed;               /* Fixe l'image pendant le scroll */
     background-size: cover;                     /* L'image prendra 100% de l'espace, quitte à la crop */ 
     background-position: center;                /* Centre la position de l'image */   

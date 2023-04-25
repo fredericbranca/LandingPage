@@ -1,6 +1,7 @@
 <?php
 
-    require('db-functions.php');
+    require('src/db-functions.php');
+    require('src/functions.php');
 
 ?>
 
@@ -14,7 +15,7 @@
 
     <!-- CSS -->
     <script src="https://kit.fontawesome.com/de7e6c09fa.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>LandingPage</title>
 </head>
@@ -78,7 +79,7 @@
                     </form>
                 </div>
                 <div class="illustration">
-                    <img src="illustration.svg" alt="Illustration d'un écran d'ordinateur avec un chat au dessus"
+                    <img src="img/illustration.svg" alt="Illustration d'un écran d'ordinateur avec un chat au dessus"
                         class="">
                 </div>
             </div>
@@ -157,7 +158,7 @@
                     <p>Complete Projects</p>
                 </div>
                 <figure class="person-img">
-                    <img src="person1.png" alt="">
+                    <img src="img/person1.png" alt="">
                     <div class="social">
                         <a href="#">
                             <i class="fa-brands fa-facebook-f"></i>
@@ -182,7 +183,7 @@
                     <p>Satisfed Clients</p>
                 </div>
                 <figure class="person-img">
-                    <img src="person2.png" alt="">
+                    <img src="img/person2.png" alt="">
                     <div class="social">
                         <a href="#">
                             <i class="fa-brands fa-facebook-f"></i>
@@ -207,7 +208,7 @@
                     <p>Team Members</p>
                 </div>
                 <figure class="person-img">
-                    <img src="person3.png" alt="">
+                    <img src="img/person3.png" alt="">
                     <div class="social">
                         <a href="#">
                             <i class="fa-brands fa-facebook-f"></i>
@@ -232,7 +233,7 @@
                     <p>Employee</p>
                 </div>
                 <figure class="person-img">
-                    <img src="person4.png" alt="">
+                    <img src="img/person4.png" alt="">
                     <div class="social">
                         <a href="#">
                             <i class="fa-brands fa-facebook-f"></i>
@@ -294,7 +295,7 @@
                                 <p2>20th March 2021</p2>
                             </i>
                         </div>
-                        <img src="blog1.png" alt="">
+                        <img src="img/blog1.png" alt="">
                     </div>
                     <div class="cardblog-text">
                         <h1>Doing a cross country road trip</h1>
@@ -313,7 +314,7 @@
                                 <p2>01th July 2021</p2>
                             </i>
                         </div>
-                        <img src="blog2.png" alt="">
+                        <img src="img/blog2.png" alt="">
                     </div>
                     <div class="cardblog-text">
                         <h1>New exhiition at our Museum</h1>
@@ -332,7 +333,7 @@
                                 <p2>25th July 2021</p2>
                             </i>
                         </div>
-                        <img src="blog3.png" alt="">
+                        <img src="img/blog3.png" alt="">
                     </div>
                     <div class="cardblog-text">
                         <h1>Design your apps in your own way</h1>
@@ -373,7 +374,7 @@
                 </div>
                 <button>Learn More</button>
             </div>
-            <img src="creativity.png" alt="">
+            <img src="img/creativity.png" alt="">
         </div>
 
         <div class="container">
@@ -482,7 +483,7 @@ foreach ($pricings as $pricing) {
     <!-- Script -->
 
     <a href="#" class="scroll-to-top"><i class="fa-solid fa-arrow-up"></i></a>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
