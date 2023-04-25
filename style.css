@@ -646,6 +646,7 @@ nav ul li a {
 .container {
     min-height: 100vh;
     background-color: #f3f3f3;
+    padding-bottom: 20px;
 }
 
 .cards-pricing {
@@ -758,7 +759,6 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 25px;
-    margin-top: 20px;
 }
 
 footer .social-footer {
