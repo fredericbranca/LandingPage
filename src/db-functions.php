@@ -22,12 +22,12 @@ function getPricings() {
     return $pricingsStatement->fetchAll(); //"Fetch" en anglais signifie « va chercher ».
 }
 
-function setPricing() {
 
     if (isset($_POST['submit'])) {
 
         //Filtre
         $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS); // empèche injection de SQL ou de HTML, supprime toutes les balises
+        var_dump($name);
         $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT, FILTER_FLAG_ALLOW_FRACTION); //FILTER_VALIDATE_FLOAT (champ "price") : validera le prix que s'il est un nombre à virgule (pas de texte ou autre…), le drapeau FILTER_FLAG_ALLOW_FRACTION est ajouté pour permettre l'utilisation du caractère "," ou "." pour la décimale.
         $sale = filter_input(INPUT_POST, 'sale', FILTER_VALIDATE_INT);
         $bandwidth = filter_input(INPUT_POST, 'bandwidth', FILTER_VALIDATE_INT);
@@ -36,7 +36,7 @@ function setPricing() {
         $domain = filter_input(INPUT_POST, 'domain', FILTER_VALIDATE_INT);
         $hiddenfees = filter_input(INPUT_POST, 'hiddenfees', FILTER_VALIDATE_BOOLEAN);
 
-        if($name && $price && $sale && $bandwidth && $onlinespace && $support && $domain && $hiddenfees) {
+        if($name != false && $price && $sale && $bandwidth && $onlinespace && $support && $domain && $hiddenfees) {
 
             $pricing = ['name' => $name, 'price' => $price, 'sale' => $sale, 'bandwidth' => $bandwidth, 'onlinespace' => $onlinespace, 'support' => $support, 'domain' => $domain, 'hiddenfeed' => $hiddenfees];
 
@@ -55,6 +55,6 @@ function setPricing() {
     // $sqlQuery = 'UPDATE pricing SET name = :abc ';
     // $pricingsStatement = $db->prepare($sqlQuery);
     // $pricingsStatement->execute(["abc" => $name]);
-}
+
 
 ?>

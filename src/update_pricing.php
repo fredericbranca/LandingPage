@@ -33,7 +33,7 @@ require('db-functions.php');
 
 foreach (getPricings() as $pricing) { ?>
 
-                <form action="<?php setPricing(); ?>" method="POST" enctype="multipart/form-data">
+                <form action="db-functions.php" method="POST" enctype="multipart/form-data">
                     <div class="card-u">  
                         <div class="card-u-center">
                             <div>
