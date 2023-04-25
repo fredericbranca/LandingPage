@@ -388,7 +388,7 @@
 
 <?php
 
-foreach ($pricings as $pricing) { 
+foreach (getPricings() as $pricing) { 
 
                 if ($pricing['sale'] > 0 ) { ?>
                     <div class="promo"> 
