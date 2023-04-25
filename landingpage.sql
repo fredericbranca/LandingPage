@@ -26,14 +26,18 @@ CREATE TABLE IF NOT EXISTS `pricing` (
   `price` float NOT NULL,
   `sale` int NOT NULL,
   `bandwidth` int NOT NULL,
-  `online_space` int NOT NULL,
+  `online_space` float NOT NULL DEFAULT '0',
   `support` bit(1) NOT NULL,
   `domain` varchar(50) NOT NULL,
   `hidden_fees` bit(1) NOT NULL,
   PRIMARY KEY (`id_pricing`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
--- Les données exportées n'étaient pas sélectionnées.
+-- Listage des données de la table landingpage.pricing : ~3 rows (environ)
+INSERT INTO `pricing` (`id_pricing`, `name`, `price`, `sale`, `bandwidth`, `online_space`, `support`, `domain`, `hidden_fees`) VALUES
+	(1, 'Starter', 9, 0, 1, 0.5, b'0', '1', b'0'),
+	(2, 'Advanced', 19, 20, 2, 1, b'1', '3', b'0'),
+	(3, 'Professional', 29, 0, 3, 2, b'1', 'Unlimited', b'0');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
