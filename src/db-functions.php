@@ -36,6 +36,7 @@ if (isset($_POST['submit']) && isset($_GET['id'])) {
     $domain = filter_input(INPUT_POST, 'domain', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $hiddenfees = filter_input(INPUT_POST, 'hiddenfees', FILTER_VALIDATE_INT);
     
+    //check les filtres (pour le bouton update de update pricing)
     if($id !==false && $name !==false && $price !==false && $sale !==false && $bandwidth !==false && $onlinespace !==false && $domain !==false && $support !==false  && $hiddenfees !==false) {
         $pricing = ['name' => $name, 'price' => $price, 'sale' => $sale, 'bandwidth' => $bandwidth, 'onlineSpace' => $onlinespace, 'support' => $support, 'domain' => $domain, 'hiddenFees' => $hiddenfees];
         // foreach($pricing as $key => $value) {
@@ -76,7 +77,7 @@ if (isset($_POST['submit']) && isset($_GET['id'])) {
     }
     
 }
-
+//bouton "Join Now" de our Pricing
 if (isset($_POST['join']) && isset($_GET['id'])) {
     $id = $_GET['id'];
     if ($id !==false) {
@@ -91,4 +92,24 @@ if (isset($_POST['join']) && isset($_GET['id'])) {
         header("Location: ../index.php#ourPricing");
     }
 }
+
+//bouton "Join Now" de our Pricing
+if (isset($_POST['subscribe'])) {
+
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+
+    if ($email !==false) {
+        $db = connection();
+        $sqlQuery = '
+                    INSERT INTO email (email)
+                    VALUES (:email)';
+        $pricingsStatement = $db->prepare($sqlQuery);
+        $pricingsStatement->execute([
+            'email' => $email
+    ]);
+        $_SESSION['Message'] = "Email subscription successfully";
+        header("Location: ../index.php");
+    }
+}
+
 ?>
