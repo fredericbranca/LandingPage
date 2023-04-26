@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 function connection(){
     try
@@ -86,7 +87,8 @@ if (isset($_POST['join']) && isset($_GET['id'])) {
                     WHERE id_pricing = '.$id;
         $pricingsStatement = $db->prepare($sqlQuery);
         $pricingsStatement->execute();
-        header("Location: ../index.php#pricing");
+        $_SESSION['Message'] = "Add to cart";
+        header("Location: ../index.php#ourPricing");
     }
 }
 ?>
