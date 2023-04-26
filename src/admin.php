@@ -81,4 +81,13 @@ foreach (getPricings() as $pricing) { ?>
             </div>
     </section>
 
+    <script src="../js/script.js"></script>
+
+    <?php 
+    if (isset($_SESSION['Message'])) { ?>
+         <div id="alert"><?= $_SESSION['Message'] ?></div>
+        <script>tempAlert(1000)</script>
+<?php   unset($_SESSION['Message']);
+    } ?>
+
 </body>
