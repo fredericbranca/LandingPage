@@ -70,9 +70,9 @@ if (isset($_POST['submit']) && isset($_GET['id'])) {
                                     'domain' => $domain, 
                                     'hiddenFees' => $hiddenfees
                                     ]);
-
+        $_SESSION['Message'] = "Pricing '" . $name . "' modified";
         // redirection                            
-        header("Location: update_pricing.php");
+        header("Location: admin.php");
     }
     
 }
