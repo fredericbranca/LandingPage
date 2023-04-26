@@ -411,7 +411,7 @@ foreach (getPricings() as $pricing) {
                                 </li>
                                 <li>
                                     <p><i class="fa-sharp fa-regular fa-circle-check"></i> Onlinespace</p>
-                                    <p><?= convert($pricing['online_space']) ?></p>
+                                    <p><?= convert($pricing['onlineSpace']) ?></p>
                                 </li>
                                 <li>
                                     <p><?= getIconeCheck($pricing['support']) ?> Support:No</p>
@@ -422,8 +422,8 @@ foreach (getPricings() as $pricing) {
                                     <p><?= $pricing['domain'] ?></p>
                                 </li>
                                 <li>
-                                    <p><?= getIconeCheck($pricing['hidden_fees']) ?> Hidden Fees</p>
-                                    <p><?= getYesNoBool($pricing['hidden_fees']) ?></p>
+                                    <p><?= getIconeCheck($pricing['hiddenFees']) ?> Hidden Fees</p>
+                                    <p><?= getYesNoBool($pricing['hiddenFees']) ?></p>
                                 </li>
                             </ul>
                         </div>
