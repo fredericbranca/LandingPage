@@ -23,33 +23,31 @@ function getPricings() {
 }
 
 
-    if (isset($_POST['submit'])) {
+if (isset($_POST['submit']) && isset($_GET['id'])) {
+    $id = $_GET['id'];
+    //Filtre
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS); // empèche injection de SQL ou de HTML, supprime toutes les balises
+    $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT, FILTER_FLAG_ALLOW_FRACTION); //FILTER_VALIDATE_FLOAT (champ "price") : validera le prix que s'il est un nombre à virgule (pas de texte ou autre…), le drapeau FILTER_FLAG_ALLOW_FRACTION est ajouté pour permettre l'utilisation du caractère "," ou "." pour la décimale.
+    $sale = filter_input(INPUT_POST, 'sale', FILTER_VALIDATE_INT);
+    $bandwidth = filter_input(INPUT_POST, 'bandwidth', FILTER_VALIDATE_INT);
+    $onlinespace = filter_input(INPUT_POST, 'onlinespace', FILTER_VALIDATE_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+    $support = filter_input(INPUT_POST, 'support', FILTER_VALIDATE_INT);
+    $domain = filter_input(INPUT_POST, 'domain', FILTER_VALIDATE_INT);
+    $hiddenfees = filter_input(INPUT_POST, 'hiddenfees', FILTER_VALIDATE_INT);
 
-        //Filtre
-        $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS); // empèche injection de SQL ou de HTML, supprime toutes les balises
-        var_dump($name);
-        $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT, FILTER_FLAG_ALLOW_FRACTION); //FILTER_VALIDATE_FLOAT (champ "price") : validera le prix que s'il est un nombre à virgule (pas de texte ou autre…), le drapeau FILTER_FLAG_ALLOW_FRACTION est ajouté pour permettre l'utilisation du caractère "," ou "." pour la décimale.
-        $sale = filter_input(INPUT_POST, 'sale', FILTER_VALIDATE_INT);
-        $bandwidth = filter_input(INPUT_POST, 'bandwidth', FILTER_VALIDATE_INT);
-        $onlinespace = filter_input(INPUT_POST, 'onlinespace', FILTER_VALIDATE_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
-        $support = filter_input(INPUT_POST, 'support', FILTER_VALIDATE_BOOLEAN);
-        $domain = filter_input(INPUT_POST, 'domain', FILTER_VALIDATE_INT);
-        $hiddenfees = filter_input(INPUT_POST, 'hiddenfees', FILTER_VALIDATE_BOOLEAN);
+    if($id !==false && $name !==false && $price !==false && $sale !==false && $bandwidth !==false && $onlinespace !==false && $domain !==false && $support !==false  && $hiddenfees !==false) {
+        $pricing = ['name' => $name, 'price' => $price, 'sale' => $sale, 'bandwidth' => $bandwidth, 'onlineSpace' => $onlinespace, 'support' => $support, 'domain' => $domain, 'hiddenFees' => $hiddenfees];
 
-        if($name != false && $price && $sale && $bandwidth && $onlinespace && $support && $domain && $hiddenfees) {
-
-            $pricing = ['name' => $name, 'price' => $price, 'sale' => $sale, 'bandwidth' => $bandwidth, 'onlinespace' => $onlinespace, 'support' => $support, 'domain' => $domain, 'hiddenfeed' => $hiddenfees];
-
-            foreach($pricing as $key => $value) {
-                $db = connection();
-                $sqlQuery = 'UPDATE pricing SET '.$key.' = :'.$value;
-                $pricingsStatement = $db->prepare($sqlQuery);
-                $pricingsStatement->execute([".$value." => $key]);
-            }
+        foreach($pricing as $key => $value) {
+            $db = connection();
+            $sqlQuery = 'UPDATE pricing SET '.$key.' = :'.$key.' WHERE id_pricing = '.$id;
+            $pricingsStatement = $db->prepare($sqlQuery);
+            $pricingsStatement->execute([$key => $value]);
         }
-        // redirection
-        header("Location: update_pricing.php");
     }
+    // redirection
+    header("Location: update_pricing.php");
+}
     // $name = 'test';
     // $db = connection();
     // $sqlQuery = 'UPDATE pricing SET name = :abc ';
