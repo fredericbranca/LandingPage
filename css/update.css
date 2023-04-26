@@ -85,6 +85,6 @@
     transition: 0.4s;
 }
 
-.card-u button:hover {
+.card-u .button input:hover {
     background-color: hwb(221 22% 34%)
 }
