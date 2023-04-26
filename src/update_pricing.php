@@ -33,7 +33,7 @@ require('db-functions.php');
 
 foreach (getPricings() as $pricing) { ?>
 
-                <form action="db-functions.php" method="POST" enctype="multipart/form-data">
+                <form action="db-functions.php?id=<?= $pricing['id_pricing'] ?>" method="POST" enctype="multipart/form-data">
                     <div class="card-u">  
                         <div class="card-u-center">
                             <div>
@@ -54,7 +54,7 @@ foreach (getPricings() as $pricing) { ?>
                             </div>
                             <div>
                                 <label for="onlinespace">OnlineSpace</label>
-                                <input type="number" min="0,00" id="onlinespace" name="onlinespace" value="<?= $pricing['online_space'] ?>" required>
+                                <input type="number" min="0,00" id="onlinespace" name="onlinespace" value="<?= $pricing['onlineSpace'] ?>" required>
                             </div>
                             <div>
                                 <label for="support">Support</label>
@@ -66,11 +66,11 @@ foreach (getPricings() as $pricing) { ?>
                             </div>
                             <div>
                                 <label for="hiddenfees">Hidden Fees</label>
-                                <input type="number" min="0" max="1" step="1" id="hiddenfees" name="hiddenfees" value="<?= $pricing['hidden_fees'] ?>" required>
+                                <input type="number" min="0" max="1" step="1" id="hiddenfees" name="hiddenfees" value="<?= $pricing['hiddenFees'] ?>" required>
                             </div>
                         </div>
                         <div class="button">
-                            <input type="submit" Value="Update">
+                            <input type="submit" name="submit" id="submit" Value="Update">
                         </div>
                     </div>
                 </form>
