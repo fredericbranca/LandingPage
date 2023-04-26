@@ -72,10 +72,14 @@ require('src/functions.php');
                     <p>Carefully crafted analysing the needs of different industries and the design achieves a great
                         balance
                         between purpose & presentation</p>
-                    <form action="">
+                        <form action="src/db-functions.php" method="POST" enctype="multipart/form-data">
                         <div class="subscribe">
-                            <input placeholder="Enter your email" type="email" name="email" id="email">
-                            <button>SUBSCRIBE</button>
+                            <input placeholder="Enter your email" type="email" name="email" id="email" autocomplete="off" required>
+                            
+                            <div class="button">
+                                <input type="submit" name="subscribe" id="submit" Value="SUBSCRIBE">
+                            </div>
+
                         </div>
                     </form>
                 </div>
