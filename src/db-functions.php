@@ -69,9 +69,24 @@ if (isset($_POST['submit']) && isset($_GET['id'])) {
                                     'domain' => $domain, 
                                     'hiddenFees' => $hiddenfees
                                     ]);
+
+        // redirection                            
+        header("Location: update_pricing.php");
     }
-    // redirection
-    header("Location: update_pricing.php");
+    
 }
 
+if (isset($_POST['join']) && isset($_GET['id'])) {
+    $id = $_GET['id'];
+    if ($id !==false) {
+        $db = connection();
+        $sqlQuery = '
+                    UPDATE pricing
+                    SET compteur = compteur + 1
+                    WHERE id_pricing = '.$id;
+        $pricingsStatement = $db->prepare($sqlQuery);
+        $pricingsStatement->execute();
+        header("Location: ../index.php#pricing");
+    }
+}
 ?>
