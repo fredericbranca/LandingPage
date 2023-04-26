@@ -388,9 +388,9 @@
 
 <?php
 
-foreach (getPricings() as $pricing) { 
-
-                if ($pricing['sale'] > 0 ) { ?>
+foreach (getPricings() as $pricing) { ?>
+                <form action="src/db-functions.php?id=<?= $pricing['id_pricing'] ?>" method="POST" enctype="multipart/form-data">
+<?php               if ($pricing['sale'] > 0 ) { ?>
                     <div class="promo"> 
                         <div class="card-p">
                             <div class="sale">
@@ -427,13 +427,16 @@ foreach (getPricings() as $pricing) {
                                 </li>
                             </ul>
                         </div>
-                        <button>Join Now</button>
+                        <div class="button">
+                            <input type="submit" name="join" id="submit" Value="Join Now">
+                        </div>
                     </div>
 
             <?php if ($pricing['sale'] > 0 ) { ?>
                     </div> 
-            <?php } 
-} ?>
+            <?php } ?>
+                </form>
+<?php } ?>
 
             </div>
         </div>
