@@ -723,21 +723,21 @@ nav ul li a {
     color:red;
 }
 
-.card-p button {
-    margin-top: 30px;
-    margin-bottom: 25px;
-    padding: 10px 60px;
+.card-p .button input {
+    padding: 10px;
+    margin-bottom: 30px;
+    width: 300px;
     font-size: 15px;
     font-weight: 500;
     border: none;
     border-radius: 5px;
     color: white;
-    background-color: #3f6cce;
+    background-color: #1294b8;
     cursor: pointer;
     transition: 0.4s;
 }
-.card-p button:hover {
-    background-color: hsl(221, 54%, 61%);
+.card-p input:hover {
+    background-color: hwb(221 22% 34%)
 }
 
 /* Media Queries */
