@@ -1,4 +1,4 @@
-function tempAlertAddCart(duration){
+function tempAlert(duration){
     var msg = document.getElementById('alert');
     console.log(msg);
     msg.style.transition = "1s";

@@ -435,10 +435,7 @@ require('src/functions.php');
                             <?php } ?>
                     </form>
                 <?php } ?>
-
             </div>
-           
-
         </div>
     </section>
 
@@ -486,9 +483,9 @@ require('src/functions.php');
     <script src="js/script.js"></script>
 
     <?php 
-    if ($_SESSION['Message']) { ?>
+    if (isset($_SESSION['Message'])) { ?>
          <div id="alert"><?= $_SESSION['Message'] ?></div>
-        <script>tempAlertAddCart(1000)</script>
+        <script>tempAlert(1000)</script>
 <?php   unset($_SESSION['Message']);
     } ?>
 
