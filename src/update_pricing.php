@@ -38,35 +38,35 @@ foreach (getPricings() as $pricing) { ?>
                         <div class="card-u-center">
                             <div>
                                 <label for="name">Name</label>
-                                <input type="text" id="name" name="name" value="<?= $pricing['name']?>" required>
+                                <input type="text" id="name" name="name" value="<?= $pricing['name']?>" autocomplete="off" required>
                             </div>
                             <div>
                                 <label for="price">Price</label>
-                                <input type="number" min="0" id="price" name="price" value="<?= $pricing['price']?>" required>
+                                <input type="number" min="0" id="price" name="price" value="<?= $pricing['price']?>" autocomplete="off" required>
                             </div>
                             <div>
                                 <label for="sale">Sale</label>
-                                <input type="number" min="0" id="sale" name="sale" value="<?= $pricing['sale'] ?>" required>
+                                <input type="number" min="0" id="sale" name="sale" value="<?= $pricing['sale'] ?>" autocomplete="off" required>
                             </div>
                             <div>
                                 <label for="bandwidth">Bandwidth</label>
-                                <input type="number" min="0" id="bandwidth" name="bandwidth" value="<?= $pricing['bandwidth'] ?>" required>
+                                <input type="number" min="0" id="bandwidth" name="bandwidth" value="<?= $pricing['bandwidth'] ?>" autocomplete="off" required>
                             </div>
                             <div>
                                 <label for="onlinespace">OnlineSpace</label>
-                                <input type="number" min="0,00" id="onlinespace" name="onlinespace" value="<?= $pricing['onlineSpace'] ?>" required>
+                                <input type="number" min="0" step="0.01" id="onlinespace" name="onlinespace" value="<?= $pricing['onlineSpace'] ?>" autocomplete="off" required>
                             </div>
                             <div>
                                 <label for="support">Support</label>
-                                <input type="number" min="0" max="1" step="1" id="support" name="support" value="<?= $pricing['support'] ?>" required>
+                                <input type="number" min="0" max="1" step="1" id="support" name="support" value="<?= $pricing['support'] ?>" autocomplete="off" required>
                             </div>
                             <div>
                                 <label for="domain">Domain</label>
-                                <input type="text" id="domain" name="domain" value="<?= $pricing['domain'] ?>" required>
+                                <input type="text" id="domain" name="domain" value="<?= $pricing['domain'] ?>" autocomplete="off" required>
                             </div>
                             <div>
                                 <label for="hiddenfees">Hidden Fees</label>
-                                <input type="number" min="0" max="1" step="1" id="hiddenfees" name="hiddenfees" value="<?= $pricing['hiddenFees'] ?>" required>
+                                <input type="number" min="0" max="1" step="1" id="hiddenfees" name="hiddenfees" value="<?= $pricing['hiddenFees'] ?>" autocomplete="off" required>
                             </div>
                         </div>
                         <div class="button">
