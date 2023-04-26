@@ -1,3 +1,13 @@
+function tempAlertAddCart(duration){
+    var msg = document.getElementById('alert');
+    console.log(msg);
+    msg.style.transition = "1s";
+    msg.style.opacity = "1";
+    setTimeout(function(){
+        msg.style.opacity = "0";
+    },duration);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     var scrollToTopButton = document.querySelector('.scroll-to-top');
 
