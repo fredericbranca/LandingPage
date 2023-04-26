@@ -37,21 +37,41 @@ if (isset($_POST['submit']) && isset($_GET['id'])) {
     
     if($id !==false && $name !==false && $price !==false && $sale !==false && $bandwidth !==false && $onlinespace !==false && $domain !==false && $support !==false  && $hiddenfees !==false) {
         $pricing = ['name' => $name, 'price' => $price, 'sale' => $sale, 'bandwidth' => $bandwidth, 'onlineSpace' => $onlinespace, 'support' => $support, 'domain' => $domain, 'hiddenFees' => $hiddenfees];
-        foreach($pricing as $key => $value) {
-            $db = connection();
-            $sqlQuery = 'UPDATE pricing SET '.$key.' = :'.$key.' WHERE id_pricing = '.$id;
-            $pricingsStatement = $db->prepare($sqlQuery);
-            $pricingsStatement->execute([$key => $value]);
-        }
+        // foreach($pricing as $key => $value) {
+        //     $db = connection();
+        //     $sqlQuery = 'UPDATE pricing SET '.$key.' = :'.$key.' WHERE id_pricing = '.$id;
+        //     $pricingsStatement = $db->prepare($sqlQuery);
+        //     $pricingsStatement->execute([$key => $value]);
+        // }
+
+        //en une seule requête :
+        $db = connection();
+        $sqlQuery = '
+                    UPDATE pricing 
+                    SET name = :name, 
+                        price = :price, 
+                        sale = :sale, 
+                        bandwidth = :bandwidth, 
+                        onlineSpace = :onlineSpace, 
+                        support = :support, 
+                        domain = :domain, 
+                        hiddenFees = :hiddenFees
+                    WHERE id_pricing = '.$id;
+
+        $pricingsStatement = $db->prepare($sqlQuery);
+        $pricingsStatement->execute([
+                                    'name' => $name, 
+                                    'price' => $price, 
+                                    'sale' => $sale, 
+                                    'bandwidth' => $bandwidth, 
+                                    'onlineSpace' => $onlinespace, 
+                                    'support' => $support, 
+                                    'domain' => $domain, 
+                                    'hiddenFees' => $hiddenfees
+                                    ]);
     }
     // redirection
     header("Location: update_pricing.php");
 }
-    // $name = 'test';
-    // $db = connection();
-    // $sqlQuery = 'UPDATE pricing SET name = :abc ';
-    // $pricingsStatement = $db->prepare($sqlQuery);
-    // $pricingsStatement->execute(["abc" => $name]);
-
 
 ?>
