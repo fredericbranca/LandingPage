@@ -32,12 +32,11 @@ if (isset($_POST['submit']) && isset($_GET['id'])) {
     $bandwidth = filter_input(INPUT_POST, 'bandwidth', FILTER_VALIDATE_INT);
     $onlinespace = filter_input(INPUT_POST, 'onlinespace', FILTER_VALIDATE_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
     $support = filter_input(INPUT_POST, 'support', FILTER_VALIDATE_INT);
-    $domain = filter_input(INPUT_POST, 'domain', FILTER_VALIDATE_INT);
+    $domain = filter_input(INPUT_POST, 'domain', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $hiddenfees = filter_input(INPUT_POST, 'hiddenfees', FILTER_VALIDATE_INT);
-
+    
     if($id !==false && $name !==false && $price !==false && $sale !==false && $bandwidth !==false && $onlinespace !==false && $domain !==false && $support !==false  && $hiddenfees !==false) {
         $pricing = ['name' => $name, 'price' => $price, 'sale' => $sale, 'bandwidth' => $bandwidth, 'onlineSpace' => $onlinespace, 'support' => $support, 'domain' => $domain, 'hiddenFees' => $hiddenfees];
-
         foreach($pricing as $key => $value) {
             $db = connection();
             $sqlQuery = 'UPDATE pricing SET '.$key.' = :'.$key.' WHERE id_pricing = '.$id;
